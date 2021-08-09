@@ -14,12 +14,26 @@
     bodyScrollingToggle();
     fadeOutEffect();
   }
+
   function fadeOutEffect() {
     document.querySelector(".fade-out-effect").classList.add("active");
     setTimeout(() => {
       document.querySelector(".fade-out-effect").classList.remove("active");
-    }, 300);
+    }, 500);
   }
+
+  const aboutBtn = document.querySelector("#about-btn");
+  const aboutLink = document.querySelector("#about-link");
+  const hireBtn = document.querySelector("#hire-btn");
+  const contactLink = document.querySelector("#contact-link");
+
+  aboutBtn.addEventListener("click", () => {
+    aboutLink.classList.add("active");
+  });
+
+  hireBtn.addEventListener("click", () => {
+    contactLink.classList.add("active");
+  });
 
   document.addEventListener("click", (event) => {
     if (event.target.classList.contains("link-item")) {
@@ -41,7 +55,8 @@
           event.target.classList.remove("outer-shadow", "hover-in-shadow");
           hideNavMenu();
         } else {
-          let navItems = navMenu.querySelector(".link-item");
+          let navItems = navMenu.querySelectorAll(".link-item");
+
           navItems.forEach((item) => {
             if (hash === item.hash) {
               item.classList.add("active", "inner-shadow");
@@ -159,7 +174,7 @@ function bodyScrollingToggle() {
   }
   function popupSlideshow() {
     const imgSrc = screenshots[slideIndex];
-    console.log(imgSrc);
+
     const popupImg = popup.querySelector(".pp-img");
     popup.querySelector(".pp-loader").classList.add("active");
     popupImg.src = imgSrc;
@@ -193,9 +208,9 @@ function bodyScrollingToggle() {
       return;
     }
     projectDetailsBtn.style.display = "block";
-    const details = (portfolioItems[itemIndex].querySelector(
+    const details = portfolioItems[itemIndex].querySelector(
       ".portfolio-item-details"
-    ).innerHTML = details);
+    ).innerHTML;
     const title = portfolioItems[itemIndex].querySelector(
       ".portfolio-item-title"
     ).innerHTML;
@@ -225,6 +240,8 @@ function bodyScrollingToggle() {
     }
   }
 })();
+
+// Hide all section except current
 (() => {
   const sections = document.querySelectorAll(".section");
   sections.forEach((section) => {
@@ -233,3 +250,22 @@ function bodyScrollingToggle() {
     }
   });
 })();
+
+const loader = document.querySelector(".loader");
+const body1 = document.querySelector("body");
+const header = document.querySelector("#home");
+const header1 = document.querySelector("header");
+const styleSwitcher1 = document.querySelector(".style-switcher1");
+header.style.visibility = "hidden";
+header1.style.visibility = "hidden";
+styleSwitcher1.style.visibility = "hidden";
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+    body1.classList.remove("loader-body");
+    body1.classList.add("normal-body");
+    header.style.visibility = "visible";
+    header1.style.visibility = "visible";
+    styleSwitcher1.style.visibility = "visible";
+  }, 3500);
+});

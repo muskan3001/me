@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="css/skins/color-1.css" />
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link
@@ -51,7 +52,28 @@
 
     <title>Document</title>
   </head>
-  <body class="dark">
+  <body class="dark loader-body">
+    <div class="loader">
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__bar"></div>
+      <div class="loader__ball"></div>
+    </div>
+
+    <!-- PRELOADER -->
+
+    <!-- <div class="preloader">
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div> -->
+
+    <!-- PRELOADER END -->
+
     <header class="header">
       <div class="container">
         <div class="row justify-content-between">
@@ -73,7 +95,10 @@
             <a href="#home" class="link-item inner-shadow active"> Home</a>
           </li>
           <li>
-            <a href="#about" class="link-item outer-shadow hover-in-shadow"
+            <a
+              href="#about"
+              id="about-link"
+              class="link-item outer-shadow hover-in-shadow"
               >About</a
             >
           </li>
@@ -89,7 +114,10 @@
           </li>
           <li></li>
           <li>
-            <a href="#contact" class="link-item outer-shadow hover-in-shadow"
+            <a
+              href="#contact"
+              id="contact-link"
+              class="link-item outer-shadow hover-in-shadow"
               >Contact</a
             >
           </li>
@@ -98,6 +126,7 @@
       <p class="copyright-text">&copy; Muskan Gulati.All rights reserved.</p>
     </nav>
     <div class="fade-out-effect"></div>
+
     <section class="home-section section active" id="home">
       <div class="effect-wrap">
         <div class="effect effect-1"></div>
@@ -145,6 +174,7 @@
           <div></div>
           <div></div>
         </div>
+        <div class="effect effect-4"></div>
       </div>
       <div class="effect effect-4"></div>
       <div class="container">
@@ -155,17 +185,14 @@
             <h1>Web Designer & Developer</h1>
             <a
               href="#about"
+              id="about-btn"
               class="link-item btn-1 outer-shadow hover-in-shadow"
               >More About Me</a
             >
           </div>
           <div class="home-img">
             <div class="img-box inner-shadow">
-              <img
-                src="img/user2.jpeg"
-                class="outer-shadow"
-                alt="profile pic"
-              />
+              <img src="img/user1.jpg" class="outer-shadow" alt="profile pic" />
             </div>
           </div>
         </div>
@@ -183,7 +210,11 @@
         <div class="row">
           <div class="about-img">
             <div class="img-box inner-shadow">
-              <img src="img/user1.jpg" class="outer-shadow" alt="profile-pic" />
+              <img
+                src="img/user2.jpeg"
+                class="outer-shadow"
+                alt="profile-pic"
+              />
             </div>
 
             <!-- social links start -->
@@ -220,6 +251,7 @@
             >
             <a
               href="#contact"
+              id="hire-btn"
               class="link-item btn-1 outer-shadow hover-in-shadow"
               >Hire me</a
             >
@@ -999,7 +1031,7 @@
     <!-- portfolio end -->
     <!-- main js -->
     <!-- //mode changer// -->
-    <div class="style-switcher outer-shadow">
+    <div class="style-switcher style-switcher1 outer-shadow">
       <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
         <i class="fas fa-cog fa-spin"></i>
       </div>
