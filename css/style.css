@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 :root {
@@ -394,6 +395,7 @@ html {
   overflow-x: hidden;
   background-color: var(--bg-black-50);
 }
+
 body.hidden-scrolling {
   overflow-y: hidden;
 }
@@ -794,6 +796,14 @@ img {
   border-radius: 50%;
   border-radius: 10px solid transparent;
 }
+.hello {
+  font-family: "Inconsolata", monospace;
+  font-size: 40px;
+  color: var(--text-black-900);
+}
+.job {
+  color: var(--skin-color) !important;
+}
 
 /* ////////////////////1st end///////////// */
 /* ////////////////////1st end///////////// */
@@ -967,7 +977,7 @@ img {
   position: relative;
 }
 .about-section .skills .skill-item .progress-bar {
-  background-color: var(--text-black-600);
+  background-color: var(--skin-color);
   height: 6px;
   left: 7px;
   top: 7px;
@@ -1170,7 +1180,7 @@ img {
 .service-section .service-item-inner h3 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--text-black-700);
+  color: var(--skin-color);
   margin: 0 0 10px;
   text-transform: capitalize;
 }
@@ -1317,7 +1327,10 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-
+.portfolio-item-img img {
+  width: 500px;
+  height: 170px;
+}
 .portfolio-section .portfolio-item-details {
   display: none;
 }
@@ -1435,7 +1448,7 @@ img {
 }
 .portfolio-popup .pp-title h2 {
   font-size: 28px;
-  color: var(--text-black-900);
+  color: var(--skin-color);
   text-transform: capitalize;
   font-weight: 600;
   margin: 0 0 5px;
@@ -1443,10 +1456,11 @@ img {
 .portfolio-popup .pp-project-details h3 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--text-black-700);
+  color: var(--skin-color);
   margin: 0 0 15px;
   text-transform: capitalize;
 }
+
 .portfolio-popup .pp-title p {
   font-size: 14px;
   font-weight: 600;
@@ -1472,6 +1486,13 @@ portfolio-popup .info ul li span {
   font-weight: 400;
 }
 portfolio-popup .info ul li a {
+  color: var(--skin-color);
+}
+
+.info-ul {
+  color: var(--text-black-600);
+}
+.info-ul li a {
   color: var(--skin-color);
 }
 portfolio-popup .info ul li:last-child {
@@ -1608,4 +1629,7 @@ portfolio-popup .info ul li:last-child {
   margin: 0.5rem;
   border-radius: 1rem;
   border: solid 0.2rem #212121;
+}
+::-webkit-input-placeholder {
+  color: var(--skin-color);
 }
