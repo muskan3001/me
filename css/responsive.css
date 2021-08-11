@@ -35,6 +35,9 @@
   .home-section .home-text {
     text-align: center;
   }
+  .about-section .about-info {
+    margin-top: 0;
+  }
   .home-section .full-screen {
     padding: 100px 0;
   }

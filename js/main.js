@@ -245,14 +245,14 @@ function bodyScrollingToggle() {
 })();
 
 // Hide all section except current
-// (() => {
-//   const sections = document.querySelectorAll(".section");
-//   sections.forEach((section) => {
-//     if (!section.classList.contains("active")) {
-//       section.classList.add("hide");
-//     }
-//   });
-// })();
+(() => {
+  const sections = document.querySelectorAll(".section");
+  sections.forEach((section) => {
+    if (!section.classList.contains("active")) {
+      section.classList.add("hide");
+    }
+  });
+})();
 
 const loader = document.querySelector(".loader");
 const body1 = document.querySelector("body");
@@ -270,5 +270,5 @@ window.addEventListener("load", () => {
     header.style.visibility = "visible";
     header1.style.visibility = "visible";
     styleSwitcher1.style.visibility = "visible";
-  }, 100);
+  }, 3600);
 });
