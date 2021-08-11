@@ -955,7 +955,10 @@
         </div>
         <div class="row">
           <div class="contact-form">
-            <form>
+            <form
+              action="https://formsubmit.co/64f01b528983711e93d296e332e3df4f"
+              method="POST"
+            >
               <div class="row">
                 <div class="w-50">
                   <div class="input-group outer-shadow hover-in-shadow">
@@ -965,6 +968,7 @@
                       placeholder="Name"
                       required
                       autocomplete="off"
+                      name="name"
                     />
                   </div>
                   <div class="input-group outer-shadow hover-in-shadow">
@@ -974,6 +978,7 @@
                       placeholder="Email"
                       required
                       autocomplete="off"
+                      name="email"
                     />
                   </div>
                   <div class="input-group outer-shadow hover-in-shadow">
@@ -983,6 +988,7 @@
                       placeholder="Subject"
                       required
                       autocomplete="off"
+                      name="subject"
                     />
                   </div>
                 </div>
@@ -993,11 +999,17 @@
                       placeholder="Message"
                       required
                       autocomplete="off"
+                      name="message"
                     ></textarea>
                   </div>
                 </div>
               </div>
-
+              <input
+                type="hidden"
+                name="_next"
+                value="https://muskan3001.github.io/me/thankyou.html"
+              />
+              <input type="hidden" name="_captcha" value="false" />
               <div class="row">
                 <div class="submit-btn">
                   <button
